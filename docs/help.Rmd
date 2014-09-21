@@ -26,4 +26,7 @@ The default inputs generate a time-series scatterplot of movie length plotted by
 
 ###Table Tab
 
-Returns a searchable and sortable table that is reactively subsetted using the `shiny::renderDataTable` function. This function makes use of the Javascript library DataTables to generate the output. 
+Returns a reactively-subsetted, searchable and sortable table using the `shiny::renderDataTable` function. This function makes use of the Javascript library DataTables to generate the output. 
+
+###Code
+https://github.com/yuorme/IMDB_Explorer

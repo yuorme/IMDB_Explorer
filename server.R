@@ -21,16 +21,29 @@ for (i in 18:24) {
 
 shinyServer(function(input, output) {
 
-    #subset data based on input sliders
+    #subset data for the plot
     dat <- reactive(function() {
         movies[(movies$rating >= input$rating[1] &
-                movies$rating <= input$rating[2] &
-                movies$votes >= input$votes &
-                movies$year >= input$year[1] &
-                movies$year <= input$year[2] &
-                movies$length >= input$length[1] &
-                movies$length <= input$length[2])                
+                    movies$rating <= input$rating[2] &
+                    movies$votes >= input$votes &
+                    movies$year >= input$year[1] &
+                    movies$year <= input$year[2] &
+                    movies$length >= input$length[1] &
+                    movies$length <= input$length[2])                
                , ]
+    })
+    
+    #generates data for the summary statistics
+    ### should make this subsettable by facets in the future
+    dat2 <- reactive(function() {
+        movies[(movies$rating >= input$rating[1] &
+                    movies$rating <= input$rating[2] &
+                    movies$votes >= input$votes &
+                    movies$year >= input$year[1] &
+                    movies$year <= input$year[2] &
+                    movies$length >= input$length[1] &
+                    movies$length <= input$length[2])                
+               , c(input$x, input$y)]
     })
     
     #output plot
@@ -65,9 +78,14 @@ shinyServer(function(input, output) {
                 
     }, height=700)
     
-
+    #output number of columns
+    output$n_movies <- renderText({ nrow(dat()) })
     
-#output datatable
+    #output summary statistics
+    ### should make this subsettable by facets in the future
+    output$summary <- renderTable({ summary(dat2()) })    
+    
+    #output datatable
      output$table <- renderDataTable({
         dat()
         }, 
