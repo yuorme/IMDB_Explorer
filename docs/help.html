@@ -89,10 +89,16 @@ if (window.hljs && document.readyState && document.readyState === "complete") {
 <li>Plots can be facetted by rows and columns using one of eight factor variables (MPAA rating, and 7 genres)</li>
 </ul>
 </div>
+<div id="reactive-count-and-summary-statistics" class="section level4">
+<h4>Reactive Count and Summary Statistics</h4>
+<ul>
+<li>Subsetting the data will trigger updating of the reactive Counts and Summary Statistics Boxes below the plot. These result from the output of the <code>nrows</code> and <code>summary</code> functions, respectively.</li>
+</ul>
+</div>
 </div>
 <div id="table-tab" class="section level3">
 <h3>Table Tab</h3>
-<p>Returns a searchable and sortable table that is reactively subsetted using the <code>shiny::renderDataTable</code> function. This function makes use of the Javascript library DataTables to generate the output.</p>
+<p>Returns a reactively-subsetted, searchable and sortable table using the <code>shiny::renderDataTable</code> function. This function makes use of the Javascript library DataTables to generate the output.</p>
 </div>
 <div id="code" class="section level3">
 <h3>Code</h3>

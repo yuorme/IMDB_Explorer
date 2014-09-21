@@ -6,7 +6,7 @@
 library(shiny)
 library(ggplot2)
 
-movies
+movies <- movies
 
 #convert genre columns from int to factors
 for (i in 18:24) {
@@ -43,7 +43,7 @@ shinyServer(function(input, output) {
                     movies$year <= input$year[2] &
                     movies$length >= input$length[1] &
                     movies$length <= input$length[2])                
-               , c(input$x, input$y)]
+            , c(input$x, input$y)]
     })
     
     #output plot

@@ -24,6 +24,9 @@ The default inputs generate a time-series scatterplot of movie length plotted by
 ####Facets
 - Plots can be facetted by rows and columns using one of eight factor variables (MPAA rating, and 7 genres)
 
+####Reactive Count and Summary Statistics
+- Subsetting the data will trigger updating of the reactive Counts and Summary Statistics Boxes below the plot. These result from the output of the `nrows` and `summary` functions, respectively.
+
 ###Table Tab
 
 Returns a reactively-subsetted, searchable and sortable table using the `shiny::renderDataTable` function. This function makes use of the Javascript library DataTables to generate the output. 
