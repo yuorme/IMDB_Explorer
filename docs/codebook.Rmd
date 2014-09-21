@@ -1,0 +1,34 @@
+---
+title: "Codebook"
+output:
+  html_document
+---
+
+###Hadley Wickham\'s IMDB Database
+
+####Description
+The [internet movie database (IMDB)](http://imdb.com/) is a website devoted to collecting movie data supplied by studios and fans. It claims to be the biggest movie database on the web and is run by Amazon. More about information imdb.com can be found [here](http://imdb.com/help/show_leaf?about), including information about the [data collection process](http://imdb.com/help/show_leaf?infosource).
+
+####Format
+A dataframe with 58788 rows and 24 variables included in the ggplot2 package.
+
+####Details
+Movies were selected for inclusion if they had a known length and had been rated by at least five imdb users. The data set contains the following fields:
+
+**title** - Title of the movie.   
+**year** - Year of release (range: 1893-2005).  
+**budget** - Total budget (if known) in US dollars  
+**length** - Length in minutes.  
+**rating** - Average IMDB user rating (range: 1-10).  
+**votes** - Number of IMDB users who rated this movie.  
+**r1-10** - Multiplying by ten gives percentile (to nearest 10%) of users who rated this movie a 1.  
+**mpaa** - MPAA rating (factor w/ 5 levels: NULL, PG, PG-13, NC-17, R)  
+**action, animation, comedy, drama, documentary, romance, short** - Binary variables representing if movie was classified as belonging to that genre.  
+
+####Notes  
+- **title** and **r1-10** are currently not included in the current visualization tool. 
+- Tooltip functionality displaying movie title information may be included in the future using the `ggvis` package.
+
+####References
+http://docs.ggplot2.org/0.9.3.1/movies.html  
+http://had.co.nz/data/movies/  
