@@ -1,6 +1,8 @@
 IMDB_Explorer
 =============
 
+https://yuorme.shinyapps.io/IMDB_Explorer/
+
 ###Introduction and Credits
 This [ShinyApp](https://www.shinyapps.io/) allows for interactive exploration of Hadley Wickham\'s IMDB Movie database (see codebook for more details). It was inspired by [Garrett Grolemund's](https://github.com/garrettgman) excellent ['Movie Explorer'](http://shiny.rstudio.com/gallery/movie-explorer.html) app. These plots are currently rendered using `ggplot2` instead of `ggvis` and therefore lacks the interactive tooltip functionality of the original. Code has been modified from the ggplot2-based [Diamond Explorer](https://github.com/rstudio/shinyapps/blob/master/guide/guide.md)
 
